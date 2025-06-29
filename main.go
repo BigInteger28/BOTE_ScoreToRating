@@ -12,11 +12,13 @@ func getRating(maxPos, score int) (int, int) {
 		1224, 1227, 1231, 1235, 1240, 1245, 1249, 1253, 1257, 1263, 1267, 1270, 1276, 1283, 1290, 1296, 1303, 1309, 1316, 1328, 1338, 1346, 1361, 1378, 1388, 
 		1436,
 	}
-	scoreF := (float64(score) * float64(maxPos)) / 2286
-	score = int(scoreF)
+	if maxPos != 2286 {
+		scoreF := (float64(score) * 2286) / float64(maxPos)
+		score = int(scoreF)
+	}
 	
 	if score >= 1436 {
-		rating = 6050 + ((score-1436)*25)
+		rating = 6050 + ((score-1436)*40)
 		level = ((rating - 500) / 75) + 2
 	} else {
 		for i := range scores {
