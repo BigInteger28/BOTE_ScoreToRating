@@ -33,10 +33,12 @@ func getRating(maxScore, lowRating, HighRating, score int) (int, int) {
 
 func main() {
 	var maxScore, score, lowRating, HighRating int
+	fmt.Println("Defaults bij engines van level 1 tot en met level 78 en 1150 engines.")
 	fmt.Print("Default lowest rating: 500")
 	fmt.Print("\nLowest rating engine: ")
 	fmt.Scanln(&lowRating)
-	fmt.Print("Highest rating engine: ")
+	fmt.Println("Default highest rating for 67 percent winrate: 15602")
+	fmt.Print("Highest rating engine for 67 percent winrate: ")
 	fmt.Scanln(&HighRating)
 	fmt.Print("Max punten mogelijk: ")
 	fmt.Scanln(&maxScore)
